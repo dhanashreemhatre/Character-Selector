@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #f2f2f2;
+}
+
+/* Character Selector Container */
+.character-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Character Info */
+.character-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.character-info h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Character Display */
+.character-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.character-display-chevron {
+  font-size: 2.5rem;
+  color: #4d4d4d;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.character-display-chevron:hover {
+  color: #f2f2f2;
+}
+
+.character-display img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  margin: 0 1.5rem;
+}
+
+/* Menu Options */
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-options button {
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.menu-options button.active {
+  background-color: #4d4d4d;
+}
+
+.menu-options button:hover {
+  background-color: #3d3d3d;
+}
+
+.character-info-card {
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.character-info-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.character-info-icon {
+  font-size: 2rem;
+  color: #7ab8ff;
+  margin-right: 1rem;
+}
+
+.character-info-name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.character-info-details {
+  background-color: #2d2d2d;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.character-info-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+.character-info-detail .character-info-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
