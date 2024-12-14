@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Character Selector Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Character Selector Application is a React-based user interface that allows users to select and view character information, as well as create new characters.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Character Display**: Users can view the details of the selected character, including their name, location, civilian status, date of birth, and money.
+2. **Character Change**: Users can navigate through the available characters using left and right chevron icons.
+3. **Menu Options**: Users can access various menu options, such as "Play Game", "Photo Mode", "Credits", "Exit Game", and "Create New Character".
+4. **Create New Character**: Users can create a new character by providing their first name, last name, date of birth, and location.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js
+- React Router (for navigation)
+- React Icons (for UI icons)
+- Tailwind CSS (for styling)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To run the Character Selector Application locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+```
+git clone https://github.com/your-username/character-selector.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd character-selector
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install the dependencies:
 
-### `npm run eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application should now be running at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+The project has the following structure:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+character-selector/
+├── src/
+│   ├── components/
+|   |   ├── ui/
+│   │   |  ├── CharacterInfo.jsx
+│   │   |  ├── CharacterDisplay.jsx
+│   │   |  ├── MenuOptions.jsx
+│   │   |  └── CreateNewCharacter.jsx
+|   |   └──CharacterSelector.jsx
+│   ├── App.js
+│   └── index.js
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `CharacterInfo.js`: Displays the information of the selected character.
+- `CharacterDisplay.js`: Displays the character image and allows changing the character.
+- `MenuOptions.js`: Renders the menu options at the bottom of the screen.
+- `CreateNewCharacter.js`: Displays the form for creating a new character.
+- `App.js`: The main component that manages the state and renders the other components.
+- `index.js`: The entry point of the application.
 
-### Code Splitting
+## Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application uses Tailwind CSS for styling. The `tailwind.config.js` file contains the custom configuration for the project.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy the Character Selector Application, you can use a hosting service like Netlify, Vercel, or GitHub Pages. The build process can be automated using a CI/CD tool like GitHub Actions or Travis CI.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you'd like to contribute to the Character Selector Application, feel free to submit a pull request. Please make sure to follow the existing code style and include tests for any new functionality.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
