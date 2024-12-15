@@ -4,14 +4,14 @@ import { FaMapMarkerAlt, FaUserCircle, FaCalendarAlt, FaDollarSign,FaKey } from 
 import { BiBowlRice } from "react-icons/bi";
 
 
-const CharacterInfo = ({ name, location, civilian, date, money }) => {
+const CharacterInfo = ({ id,name, location, civilian, date, money }) => {
   return (
     <div className="character-info">
       <h1>{name}</h1>
       <div className="character-info-details">
         <div className="character-info-detail">
           <FaKey className="character-info-icon" />
-          <p>1</p>
+          <p>{id}</p>
         </div>
         <div className="character-info-detail">
           <FaMapMarkerAlt className="character-info-icon" />

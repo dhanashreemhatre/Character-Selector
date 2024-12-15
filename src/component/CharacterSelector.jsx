@@ -1,10 +1,10 @@
-// CharacterSelector.js
 import React, { useState } from 'react';
 import CharacterDisplay from './ui/CharacterDisplay';
-import CharacterSelection from './ui/CharacterSelection';
+import CharacterSelection, { allcharacters } from './ui/CharacterSelection';
 import MenuOptions from './ui/MenuOptions';
 import CharacterInfo from './ui/CharacterInfo';
 import CreateNewCharacter from './ui/CreateNewCharacter';
+import PhotoMode from './ui/PhotoMode'; 
 
 const CharacterSelector = () => {
   const [selectedCharacter, setSelectedCharacter] = useState({
@@ -16,7 +16,7 @@ const CharacterSelector = () => {
     dateOfBirth: 'January 1, 1990',
     money: 150000,
   });
-  const [currentMenu, setCurrentMenu] = useState('PLAY_GAME');
+  const [currentMenu, setCurrentMenu] = useState('none');
   const [isCreatingNewCharacter, setIsCreatingNewCharacter] = useState(false);
 
   const handleCharacterSelect = (character) => {
@@ -32,9 +32,8 @@ const CharacterSelector = () => {
   };
 
   const handleCharacterChange = (direction) => {
-    const characters = CharacterSelection.characters;
+    const characters = allcharacters;
     if (!characters) return;
-
     const currentIndex = characters.findIndex((char) => char.id === selectedCharacter.id);
     const newIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
     const newCharacter = characters[newIndex] || characters[0];
@@ -46,31 +45,38 @@ const CharacterSelector = () => {
     setIsCreatingNewCharacter(false);
   };
 
+  const handleExitPhotoMode = () => {
+    setIsCreatingNewCharacter(false)
+    setCurrentMenu('none'); // Return to the default menu
+  };
+
   return (
     <div className="character-selector">
-       {isCreatingNewCharacter ? (
-        <CreateNewCharacter onCreateCharacter={handleCreateNewCharacter} />
+      {isCreatingNewCharacter ? (
+        <CreateNewCharacter onExit={handleExitPhotoMode} onCreateCharacter={handleCreateNewCharacter} />
+      ) : currentMenu === 'PHOTO_MODE' ? (
+        <PhotoMode onExitPhotoMode={handleExitPhotoMode} />
       ) : (
-      <div style={{ marginRight: "4%" }}>
-        
-      <CharacterInfo
-        name={selectedCharacter.name}
-        location={selectedCharacter.location}
-        civilian={selectedCharacter.civilian}
-        date={selectedCharacter.dateOfBirth}
-        money={selectedCharacter.money}
-      />
-      <CharacterDisplay
-        character={selectedCharacter}
-        onCharacterChange={handleCharacterChange}
-      />
-      <MenuOptions
-        currentMenu={currentMenu}
-        onMenuOptionClick={handleMenuOptionClick}
-        onCreateNewCharacter={() => setIsCreatingNewCharacter(true)}
-      />
-      </div>
-         )}
+        <div style={{ marginRight: '4%',width:"35%" }}>
+          <CharacterInfo
+            id={selectedCharacter.id}
+            name={selectedCharacter.name}
+            location={selectedCharacter.location}
+            civilian={selectedCharacter.civilian}
+            date={selectedCharacter.dateOfBirth}
+            money={selectedCharacter.money}
+          />
+          <CharacterDisplay
+            character={selectedCharacter}
+            onCharacterChange={handleCharacterChange}
+          />
+          <MenuOptions
+            currentMenu={currentMenu}
+            onMenuOptionClick={handleMenuOptionClick}
+            onCreateNewCharacter={() => setIsCreatingNewCharacter(true)}
+          />
+        </div>
+      )}
     </div>
   );
 };
