@@ -147,7 +147,8 @@ body {
 .create-new-character {
   position: absolute;
   left: 0;
-  top: 20;
+  /* top: 20; */
+  margin: 4rem;
   background-color: #2d2d2d;
   padding: 2rem;
   box-sizing: border-box;
@@ -195,6 +196,34 @@ body {
 
 .create-button:hover {
   background-color: #5d5d5d;
+}
+.create-new-character select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #efefef;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Style for the select dropdown */
+.create-new-character select {
+  appearance: none;  /* Remove default styling (cross-browser) */
+  background-color: #3d3d3d;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.293%204.293a1%201%200%200%201%201.414%201.414L7%207.586V12a1%201%200%200%201%201%201%201%201h4a1%201%200%200%201%201%201%201%201V7.586l1.293-1.293a1%201%200%200%201%201.414%201.414L8%208.707%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%22.5%22/%3E%3C/svg%3E%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Focused state for input and select */
+.create-new-character input:focus,
+.create-new-character select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 
