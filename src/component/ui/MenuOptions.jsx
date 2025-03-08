@@ -2,7 +2,7 @@
 import React from 'react';
 
 const MenuOptions = ({ currentMenu, onMenuOptionClick }) => {
-  const menuOptions = ['PLAY_GAME', 'PHOTO_MODE', 'CREDITS', 'EXIT_GAME', 'CREATE_NEW_CHARACTER'];
+  const menuOptions = ['PLAY_GAME', 'PHOTO_MODE', 'CREDITS', 'EXIT_GAME', 'CREATE_NEW CHARACTER'];
 
   return (
     <div className="menu-options">

@@ -39,7 +39,8 @@ body {
 .character-display {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 1.5rem;
 }
 
@@ -113,7 +114,7 @@ body {
 
 .character-info-icon {
   font-size: 2rem;
-  color: #7ab8ff;
+  color: #f2f2f2;
 }
 
 .character-info-name {
@@ -137,7 +138,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  color: #b3b3b3;
+  color: #e0e0e0;
 }
 
 .character-info-detail .character-info-icon {
