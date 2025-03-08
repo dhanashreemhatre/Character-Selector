@@ -57,7 +57,7 @@ const CharacterSelector = () => {
       ) : currentMenu === 'PHOTO_MODE' ? (
         <PhotoMode onExitPhotoMode={handleExitPhotoMode} />
       ) : (
-        <div style={{ marginRight: '4%',width:"35%" }}>
+        <div style={{ marginRight: '4%',width:"40%" }}>
           <CharacterInfo
             id={selectedCharacter.id}
             name={selectedCharacter.name}
